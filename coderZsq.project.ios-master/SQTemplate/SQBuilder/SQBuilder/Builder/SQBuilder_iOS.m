@@ -74,13 +74,16 @@
     
     NSArray * filenames = @[@"Interface.h",
                             @"Model.h", @"Model.m",
-                            @"View.h", @"View.m",
+                            @"BaseView.h", @"BaseView.m",
                             @"ViewModel.h", @"ViewModel.m",
-                            @"Presenter.h", @"Presenter.m",
                             @"ViewController.h", @"ViewController.m"];
     
     NSString * header = [NSString stringWithFormat:@"%@%@",self.prefix, self.module];
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY/M/d"];
+    NSString *nowYMD = [dateFormatter stringFromDate:[NSDate date]];
+
     for (NSString * filename in filenames) {
         NSMutableArray * parameter = @[@{@"<#Root#>" : self.prefix},
                                        @{@"<#Unit#>" : self.module},
@@ -94,7 +97,7 @@
                                        @{@"<#InitializeParameter#>" : initialize_parameter},
                                        @{@"<#InitializeInterface#>" : initialize_interface},
                                        @{@"<#InitializeAssignment#>" : initialize_assignment},
-                                       ].mutableCopy;
+                                       @{@"<#ProDate#>" : nowYMD}].mutableCopy;
         [SQFileParser parser_rw:path code:@"oc" filename:filename header:header parameter:parameter];
     }
 }

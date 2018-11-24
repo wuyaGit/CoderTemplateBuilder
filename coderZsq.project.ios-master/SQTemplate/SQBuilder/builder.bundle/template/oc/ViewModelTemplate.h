@@ -1,9 +1,9 @@
 //
-//  ViewModelTemplate.h
-//  SQTemplate
+//  <#Root#><#Unit#>ViewModel.h
+//  WY_Template_Module
 //
-//  Created by 双泉 朱 on 17/5/5.
-//  Copyright © 2017年 Doubles_Z. All rights reserved.
+//  Created by wuyaGit on <#ProDate#>.
+//  Copyright © 2018年 https://github.com/wuyaGit. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,9 +11,8 @@
 
 @interface <#Root#><#Unit#>ViewModel : NSObject <<#Root#><#Unit#>ViewModelInterface>
 
-@property (nonatomic,strong) id<<#Root#><#Unit#>ModelInterface> model;
+@property (nonatomic, strong) id<<#Root#><#Unit#>ModelInterface> model;
 
-- (void)initializeWithModel:(id<<#Root#><#Unit#>ModelInterface>)model <#InitializeInterface#>completion:(void(^)())completion;
+- (void)adapterBaseViewWithCompletion:(void (^)(id<<#Root#><#Unit#>ViewModelInterface> viewModel))completion;
 <#ViewModelInterface#>
-
 @end

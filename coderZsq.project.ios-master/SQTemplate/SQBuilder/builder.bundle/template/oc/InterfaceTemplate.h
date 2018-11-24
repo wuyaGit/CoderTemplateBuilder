@@ -1,9 +1,9 @@
 //
 //  <#Root#><#Unit#>Interface.h
-//  WY_Module
+//  WY_Template_Module
 //
-//  Created by WUYA on 17/5/5.
-//  Copyright © 2017年 Doubles_Z. All rights reserved.
+//  Created by wuyaGit on <#ProDate#>.
+//  Copyright © 2018年 https://github.com/wuyaGit. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,16 +16,14 @@
 @protocol <#Root#><#Unit#>ViewModelInterface <NSObject>
 
 @optional
-@property (nonatomic,strong) id<<#Root#><#Unit#>ModelInterface> model;
+@property (nonatomic, strong) id<<#Root#><#Unit#>ModelInterface> model;
 
 @optional
-- (void)initializeWithModel:(id<<#Root#><#Unit#>ModelInterface>)model <#InitializeInterface#>completion:(void(^)())completion;
+- (void)adapterBaseViewWithCompletion:(void (^)(id<<#Root#><#Unit#>ViewModelInterface> viewModel))completion;
 <#ViewModelInterface#>
 @end
 
 @protocol <#Root#><#Unit#>ViewInterface <NSObject>
 
-@property (nonatomic,weak) id<<#Root#><#Unit#>ViewModelInterface> <#unit#>ViewModel;
-@property (nonatomic,weak) id<<#Root#><#Unit#>ViewModelInterface> <#unit#>Operator;
-
+@property (nonatomic, strong) id<<#Root#><#Unit#>ViewModelInterface> viewModel;
 @end

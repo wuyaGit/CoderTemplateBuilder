@@ -1,14 +1,13 @@
 //
-//  ControllerTemplate.h
-//  SQTemplate
+//  <#Root#><#Unit#>ViewController.h
+//  WY_Template_Module
 //
-//  Created by 双泉 朱 on 17/5/5.
-//  Copyright © 2017年 Doubles_Z. All rights reserved.
+//  Created by wuyaGit on <#ProDate#>.
+//  Copyright © 2018年 https://github.com/wuyaGit. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface <#Root#><#Unit#>ViewController : UIViewController
-
 <#InitializeProperty#>
 @end
