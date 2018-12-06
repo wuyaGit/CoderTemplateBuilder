@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>prefix</key>
-	<string>WY_KF_</string>
+	<string>SZC_WG_</string>
 	<key>module</key>
-	<string>Reset</string>
+	<string>AfterService</string>
 	<key>parameter</key>
 	<dict/>
 	<key>dataList</key>
